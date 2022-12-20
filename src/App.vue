@@ -253,7 +253,10 @@ data() {
 
 
 
-<template>
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 7 | style bind -->
+
+
+<!-- <template>
 
   <div>
 
@@ -381,4 +384,151 @@ data() {
     color: black;
     font-weight: 700;
   }
+</style> -->
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 7 | style bind -->
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 8 | v-model -->
+
+
+<template>
+
+  <div>
+
+    <div>
+      <label>NOME</label>
+      <br>
+
+      <input v-model="name" type="text">
+      <br>
+
+      {{ name }}
+    </div>
+
+<br><br>
+
+    <div>
+      <label>ESPORTES</label>
+      <br>
+
+      <select v-model="esportes">
+        <option value="">Escolha</option>
+        <option value="futebol">Futebol</option>
+        <option value="basquete">Basquete</option>
+        <option value="volei">Volei</option>
+      </select>
+      <br>
+
+      {{ esportes }}
+    </div>
+
+    <br><br>
+
+    <div>
+      <label>NewsLatter</label>
+      <br>
+      <input 
+      type="radio"
+      v-model="newslatter" 
+      value="Sim"  
+      >SIM
+
+
+  
+      <input 
+      type="radio"
+      v-model="newslatter" 
+      value="Nao"  
+      >NAO
+
+      <br>
+
+      {{ newslatter }}
+    </div>
+
+    <br><br>
+
+    <div>
+      <label> Contrato</label>
+      <br>
+      <input
+        type="checkbox"
+        v-model="contrato"
+        > Aceite os termos
+        <br>
+        {{ contrato }}
+    </div>
+
+      <br><br>
+
+    <div>
+      <label>Cores</label>
+      <br>
+      <input 
+      type="checkbox"
+      v-model="colors" 
+      value="Azul"  
+      >Azul
+
+
+  
+      <input 
+      type="checkbox"
+      v-model="colors" 
+      value="Preto"  
+      >Preto
+
+      <br>
+
+      {{ colors }}
+    </div>
+
+  </div>
+
+</template>
+
+<script>
+
+  export default {
+    name: 'App',
+    components: {
+
+    },
+
+    data() {
+      
+      return {
+        name: 'Paulo',
+        esportes: 'futebol',
+        newslatter: '',
+        contrato: false,
+        colors: [],
+    }
+
+  }
+}
+</script>
+
+<style>
+
+  
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+
 </style>
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 8 | v-model -->
