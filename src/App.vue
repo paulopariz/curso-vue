@@ -399,7 +399,7 @@ data() {
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 8 | v-model -->
 
 
-<template>
+<!-- <template>
 
   <div>
 
@@ -529,6 +529,113 @@ data() {
     margin-top: 60px;
   }
 
-</style>
+</style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 8 | v-model -->
+
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 9 | events -->
+
+
+<template>
+
+  <div>
+
+    <button @click="onClick">
+      Enviar
+    </button>
+
+    <br>
+
+    <div
+      @mouseover="onMouseOver"
+      @mouseout="onMouseOut"
+    >
+    mouse over
+
+    </div>
+
+
+    <br><br>
+
+    <div>
+      <form action="https://google.com"
+        @submit.prevent="onSubmit"
+        >
+   
+      <input 
+        type="text"
+        @keyup.enter="onKeyUp">
+
+      <button @click="submit">
+      Enviar
+    </button>
+
+  </form>
+    </div>
+
+  </div>
+
+</template>
+
+<script>
+
+  export default {
+    name: 'App',
+    components: {
+
+    },
+
+    data() {
+      
+      return {
+        
+    }
+
+  },
+
+  methods: {
+    onClick($evt){
+      console.log('click', $evt)
+    },
+    onMouseOver($evt){
+      console.log('mouse over', $evt)
+    },
+    onMouseOut($evt){
+      console.log('mouse out', $evt)
+    },
+    onSubmit($evt){
+      console.log('submit', $evt)
+    },
+    onKeyUp($evt){
+      console.log('onKeyUp', $evt)
+    }
+  }
+}
+</script>
+
+<style>
+
+  
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+
+</style>
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 9 | events -->
+
