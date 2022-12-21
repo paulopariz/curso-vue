@@ -14,7 +14,11 @@
                     'alert',
                     this.variant ? `alert-${this.variant}` : ''
                 ]
-            }
+            },
+
+            methods: {
+                
+            },
         }
     }
 </script>
@@ -26,6 +30,8 @@
         border-radius: 5px;
         color: gray;
         background: #ddd;
+        display: flex;
+        justify-content: space-between;
     }
 
     .alert-success{

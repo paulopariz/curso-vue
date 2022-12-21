@@ -1147,13 +1147,15 @@ export default {
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 15 | props -->
 
-<template>
+<!-- <template>
 
     <div>
       <BaseAlert 
         :variant="variant"
         :text="text"
-        />
+        ></BaseAlert>
+
+        
         
     </div>
 </template>
@@ -1184,6 +1186,7 @@ export default {
 },
 
   methods: {
+    
    
   },
 
@@ -1202,6 +1205,82 @@ export default {
     margin-top: 60px;
   }
 
-</style>
+</style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 15 | props -->
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+<!-- ////////////////////////////////
+  ////////AULA 16 | ENVIANDO DADOS //////////////
+//////////////////////////////////// -->
+
+
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 17 | router -->
+
+<template>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link :to="rotaDinamica">Servicos</router-link>
+
+  </nav>
+  <router-view/>
+</template>
+
+
+<script>
+export default {
+  data() {
+    return{
+      rotaDinamica: { name: 'servicos'}
+    }
+  }
+}
+
+</script>
+
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 17 | router -->
