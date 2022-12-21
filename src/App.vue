@@ -917,7 +917,7 @@ export default {
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 12 | ciclo -->
 
-<template>
+<!-- <template>
 
   <div>
     <TheHeader v-if="showHeader" />
@@ -1010,6 +1010,90 @@ export default {
   }
   
 
-</style>
+</style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 12 | ciclo -->
+
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 13 | slot -->
+
+
+<template>
+
+  <div>
+    <TheHeader>
+      <template v-slot:title>
+        Home
+      </template>
+
+      <template v-slot:description>
+        <p>
+          edgrr
+        </p>
+      </template>
+
+      content do header
+    </TheHeader>
+  </div>
+
+</template>
+
+<script>
+import TheHeader from './components/aula4/TheHeader.vue';
+
+
+export default {
+  name: 'App',
+  components: {
+    TheHeader
+  },
+  data() {
+    return {
+      
+    } 
+  },
+
+
+   beforeUpdate() {},
+   updated() {},
+   beforeCreate() {},
+   created() {},
+   beforeMount() {},
+   mounted() {},
+  
+
+  watch: {
+},
+
+  methods: {
+   
+  },
+
+  computed: {
+
+  }
+}
+</script>
+
+<style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  
+
+</style>
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 13 | slot -->
