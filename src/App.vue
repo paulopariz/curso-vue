@@ -546,7 +546,7 @@ data() {
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 9 | events -->
 
 
-<template>
+<!-- <template>
 
   <div>
 
@@ -635,7 +635,157 @@ data() {
     margin-top: 60px;
   }
 
-</style>
+</style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 9 | events -->
 
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 10 | computed -->
+
+
+<template>
+
+  <div>
+
+    {{ fullName }}
+
+    <br><br>
+
+    <h2>TODOS ABERTAS</h2>
+    <div 
+      v-for="todo in uncompletedTodos"
+      :key="todo.id">
+      <ul>
+        <li>{{ todo.title }} </li>
+      </ul>
+    </div>
+
+    <br><br>
+
+    <h2>TODOS COMPLETADAS</h2>
+    <div 
+      v-for="todo in completedTodos"
+      :key="todo.id">
+      <ul>
+        <li>{{ todo.title }} </li>
+      </ul>
+    </div>
+
+    <br><br><br>
+
+    <h2>TODOS</h2>
+    <div 
+      v-for="todo in todos"
+      :key="todo.id">
+
+      <input
+          v-model="todo.completed" 
+          type="checkbox">
+   
+      {{ todo.title }} 
+   
+    </div>
+
+  </div>
+
+</template>
+
+<script>
+
+  export default {
+    name: 'App',
+    components: {
+
+    },
+
+    data() {
+      
+      return {
+        user:{
+          nome: 'Paulo',
+          sobrenome: 'Pariz',
+        },
+        todos: [
+                {
+                  "userId": 1,
+                  "id": 1,
+                  "title": "delectus aut autem",
+                  "completed": false
+                },
+                {
+                  "userId": 1,
+                  "id": 2,
+                  "title": "quis ut nam facilis et officia qui",
+                  "completed": false
+                },
+                {
+                  "userId": 1,
+                  "id": 3,
+                  "title": "fugiat veniam minus",
+                  "completed": false
+                },
+                {
+                  "userId": 1,
+                  "id": 4,
+                  "title": "et porro tempora",
+                  "completed": true
+                },
+                {
+                  "userId": 1,
+                  "id": 5,
+                  "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                  "completed": false
+                }
+              ]
+    }
+
+  },
+
+  methods: {
+  
+  },
+
+  computed: {
+        fullName() {
+          return `${this.user.nome} ${this.user.sobrenome}`
+        },
+
+        uncompletedTodos() {
+          return this.todos.filter(todo => todo.completed);
+        },
+
+        completedTodos() {
+          return this.todos.filter(todo => !todo.completed);
+      }
+
+  }
+}
+</script>
+
+<style>
+
+  
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  li{
+    list-style: none;
+  }
+
+</style>
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 10 | computed -->
