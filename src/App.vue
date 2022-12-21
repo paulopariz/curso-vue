@@ -1,68 +1,59 @@
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 4 | v-if & v-show -->
 
 <!-- <template>
-    <TheHeader
-    v-if="showHeader"
-    ></TheHeader>
+<TheHeader v-if="showHeader"></TheHeader>
 
-  <div v-show="showNme">
-    nome: {{ name }} <br> 
+<div v-show="showNme">
+    nome: {{ name }} <br>
     sobrenome: {{ sobreNome }}
-  </div>
+</div>
 
+<div v-if="accessLevel === 'admin'">Admin</div>
+<div v-else-if="accessLevel === 'marketing'">Marketing</div>
+<div v-else>User</div>
 
-  <div v-if="accessLevel === 'admin'">Admin</div>
-  <div v-else-if="accessLevel === 'marketing'">Marketing</div>
-  <div v-else>User</div>
-
-
-
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<img alt="Vue logo" src="./assets/logo.png">
+<HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheHeader from './components/aula4/TheHeader.vue'
+    import HelloWorld from './components/HelloWorld.vue'
+    import TheHeader from './components/aula4/TheHeader.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    TheHeader
-  },
+    export default {
+        name: 'App',
+        components: {
+            HelloWorld,
+            TheHeader
+        },
 
-data() {
-  return {
-    showHeader: true,
-    name: 'PAULO',
-    sobreNome: 'PARIZ',
-    showNme: false,
-    accessLevel: 'marketing'
-  }
-}
+        data() {
+            return {
+                showHeader: true,
+                name: 'PAULO',
+                sobreNome: 'PARIZ',
+                showNme: false,
+                accessLevel: 'marketing'
+            }
+        }
 
-}
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
 </style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 4 | v-if & v-show -->
 
-
-
 <!--///////////////////////////////////////-->
-
-
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 5 | v-for -->
 
@@ -126,12 +117,12 @@ data() {
   }
 </script>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+<script>
+< style > #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -144,95 +135,97 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 5 | v-for -->
 
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 6 | v-bind -->
-
 
 <!-- <template>
 
   <div>
 
     <div 
-      v-for="(obj, index) in todos"
-      v-bind:key="obj.id">
+      v-for= "(obj, index) in todos"
+        v - bind: key = "obj.id" >
 
-      <ul>
-        <li>
-          <img
-          v-if="obj.img" 
-          :src="obj.img">
-          {{ index }} - {{ obj.title }}
-        </li>
-      </ul>
-    </div>
+            <
+            ul >
+            <
+            li >
+            <
+            img
+        v -
+            if = "obj.img": src = "obj.img" > {
+                {
+                    index
+                }
+            } - {
+                {
+                    obj.title
+                }
+            } <
+            /li> <
+            /ul> <
+            /div>
 
+            <
+            /div>
 
+            <
+            /template>
 
-  </div>
+        export default {
+            name: 'App',
+            components: {
 
-</template>
+            },
 
-<script>
-  export default {
-    name: 'App',
-    components: {
+            data() {
+                return {
+                    todos: [{
+                            "userId": 1,
+                            "id": 1,
+                            "title": "delectus aut autem",
+                            "completed": false,
+                            "img": "https://via.placeholder.com/150",
+                        },
+                        {
+                            "img": "https://via.placeholder.com/150",
+                            "userId": 1,
+                            "id": 2,
+                            "title": "quis ut nam facilis et officia qui",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 3,
+                            "title": "fugiat veniam minus",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 4,
+                            "title": "et porro tempora",
+                            "completed": true
+                        },
+                        {
+                            "userId": 1,
+                            "id": 5,
+                            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                            "completed": false
+                        }
+                    ]
+                }
+            }
 
-    },
-
-    data() {
-      return {
-        todos: [{
-          "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false,
-            "img": "https://via.placeholder.com/150",
-          },
-          {
-            "img": "https://via.placeholder.com/150",
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 4,
-            "title": "et porro tempora",
-            "completed": true
-          },
-          {
-            "userId": 1,
-            "id": 5,
-            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-            "completed": false
-          }
-        ]
-      }
-    }
-
-  }
+        }
 </script>
 
-<s>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+<script>
+< s > #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -245,136 +238,143 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 6 | v-bind -->
 
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 7 | style bind -->
-
 
 <!-- <template>
 
   <div>
 
-    <h1 :class="{ 'title': true, 'title-home': isHome}">
-      CURSO VUE 3
-    </h1>
+    <h1 :class= "{ 'title': true, 'title-home': isHome}" >
+            CURSO VUE 3 <
+            /h1>
 
+            <
+            p: class = "pClass" >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.Nisi dignissimos consectetur repudiandae odio.Sint mollitia odit quam sit illo praesentium laborum facere commodi, enim ratione molestiae qui tempore deleniti amet. <
+            /p>
 
-    <p :class="pClass">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos consectetur repudiandae odio. Sint mollitia odit quam sit illo praesentium laborum facere commodi, enim ratione molestiae qui tempore deleniti amet.
-    </p>
+            <
+            p: style = "styleClass" >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.Id laborum ad corporis iusto deserunt sed ducimus eveniet quibusdam eius omnis quos maiores in , blanditiis aliquam modi minus est iste rerum ?
+            <
+            /p>
 
+            <
+            div
+        v -
+            for = "(obj, index) in todos"
+        v - bind: key = "obj.id" >
 
+            <
+            ul >
+            <
+            li >
+            <
+            img
+        v -
+            if = "obj.img": src = "obj.img" > {
+                {
+                    index
+                }
+            } - {
+                {
+                    obj.title
+                }
+            } <
+            /li> <
+            /ul> <
+            /div>
 
-    <p :style="styleClass">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id laborum ad corporis iusto deserunt sed ducimus eveniet quibusdam eius omnis quos maiores in, blanditiis aliquam modi minus est iste rerum?
-    </p>
+            <
+            /div>
 
+            <
+            /template>
 
+        export default {
+            name: 'App',
+            components: {
 
-    <div 
-      v-for="(obj, index) in todos"
-      v-bind:key="obj.id">
+            },
 
-      <ul>
-        <li>
-          <img
-          v-if="obj.img" 
-          :src="obj.img">
-          {{ index }} - {{ obj.title }}
-        </li>
-      </ul>
-    </div>
+            data() {
 
+                return {
+                    classVar: 'title',
+                    isHome: true,
+                    pClass: ['text', 'text-home'],
+                    styleClass: {
+                        'color': 'purple',
+                        'fontSize': '21px',
+                        'backgroundColor': 'black',
+                        'opacity': '0.9'
+                    },
+                    todos: [{
+                            "userId": 1,
+                            "id": 1,
+                            "title": "delectus aut autem",
+                            "completed": false,
+                            "img": "https://via.placeholder.com/150",
+                        },
+                        {
+                            "img": "https://via.placeholder.com/150",
+                            "userId": 1,
+                            "id": 2,
+                            "title": "quis ut nam facilis et officia qui",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 3,
+                            "title": "fugiat veniam minus",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 4,
+                            "title": "et porro tempora",
+                            "completed": true
+                        },
+                        {
+                            "userId": 1,
+                            "id": 5,
+                            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                            "completed": false
+                        }
+                    ]
+                }
+            }
 
-
-  </div>
-
-</template>
-
-<script>
-
-  export default {
-    name: 'App',
-    components: {
-
-    },
-
-    data() {
-      
-      return {
-        classVar: 'title',
-        isHome: true,
-        pClass: ['text', 'text-home'],
-        styleClass: { 'color': 'purple', 'fontSize': '21px', 'backgroundColor': 'black', 'opacity': '0.9'},
-        todos: [{
-          "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false,
-            "img": "https://via.placeholder.com/150",
-          },
-          {
-            "img": "https://via.placeholder.com/150",
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 4,
-            "title": "et porro tempora",
-            "completed": true
-          },
-          {
-            "userId": 1,
-            "id": 5,
-            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-            "completed": false
-          }
-        ]
-      }
-    }
-
-  }
+        }
 </script>
 
-<style>
+<script>
+< style >
 
-  .text-home{
-    color: yellow;
-    font-size: 15px;
-  }
+    .text - home {
+        color: yellow;
+        font - size: 15 px;
+    }
 
-  .text {
-    color: blue;
-  }
-  .title{
-    font-size: 23px;
-    color: red;
-  }
+    .text {
+        color: blue;
+    }
+    .title {
+        font - size: 23 px;
+        color: red;
+    }
 
-  .title-home{
-    font-size: 43px;
-    color: green;
-  }
+    .title - home {
+        font - size: 43 px;
+        color: green;
+    }
 
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+# app {
+    font - family: Avenir, Helvetica, Arial, sans - serif; -
+    webkit - font - smoothing: antialiased; -
+    moz - osx - font - smoothing: grayscale;
     color: #2c3e50;
     margin-top: 60px;
   }
@@ -388,16 +388,9 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 7 | style bind -->
 
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 8 | v-model -->
-
 
 <!-- <template>
 
@@ -407,125 +400,162 @@ data() {
       <label>NOME</label>
       <br>
 
-      <input v-model="name" type="text">
-      <br>
+      <input v-model= "name"
+    type = "text" >
+        <
+        br >
 
-      {{ name }}
-    </div>
+        {
+            {
+                name
+            }
+        } <
+        /div>
 
-<br><br>
+        <
+        br > < br >
 
-    <div>
-      <label>ESPORTES</label>
-      <br>
+        <
+        div >
+        <
+        label > ESPORTES < /label> <
+        br >
 
-      <select v-model="esportes">
-        <option value="">Escolha</option>
-        <option value="futebol">Futebol</option>
-        <option value="basquete">Basquete</option>
-        <option value="volei">Volei</option>
-      </select>
-      <br>
+        <
+        select v - model = "esportes" >
+        <
+        option value = "" > Escolha < /option> <
+        option value = "futebol" > Futebol < /option> <
+        option value = "basquete" > Basquete < /option> <
+        option value = "volei" > Volei < /option> <
+        /select> <
+        br >
 
-      {{ esportes }}
-    </div>
+        {
+            {
+                esportes
+            }
+        } <
+        /div>
 
-    <br><br>
+        <
+        br > < br >
 
-    <div>
-      <label>NewsLatter</label>
-      <br>
-      <input 
-      type="radio"
-      v-model="newslatter" 
-      value="Sim"  
-      >SIM
+        <
+        div >
+        <
+        label > NewsLatter < /label> <
+        br >
+        <
+        input
+    type = "radio"
+    v - model = "newslatter"
+    value = "Sim" >
+        SIM
 
+        <
+        input
+    type = "radio"
+    v - model = "newslatter"
+    value = "Nao" >
+        NAO
 
-  
-      <input 
-      type="radio"
-      v-model="newslatter" 
-      value="Nao"  
-      >NAO
+        <
+        br >
 
-      <br>
+        {
+            {
+                newslatter
+            }
+        } <
+        /div>
 
-      {{ newslatter }}
-    </div>
+        <
+        br > < br >
 
-    <br><br>
+        <
+        div >
+        <
+        label > Contrato < /label> <
+        br >
+        <
+        input
+    type = "checkbox"
+    v - model = "contrato" >
+        Aceite os termos <
+        br > {
+            {
+                contrato
+            }
+        } <
+        /div>
 
-    <div>
-      <label> Contrato</label>
-      <br>
-      <input
-        type="checkbox"
-        v-model="contrato"
-        > Aceite os termos
-        <br>
-        {{ contrato }}
-    </div>
+        <
+        br > < br >
 
-      <br><br>
+        <
+        div >
+        <
+        label > Cores < /label> <
+        br >
+        <
+        input
+    type = "checkbox"
+    v - model = "colors"
+    value = "Azul" >
+        Azul
 
-    <div>
-      <label>Cores</label>
-      <br>
-      <input 
-      type="checkbox"
-      v-model="colors" 
-      value="Azul"  
-      >Azul
+        <
+        input
+    type = "checkbox"
+    v - model = "colors"
+    value = "Preto" >
+        Preto
 
+        <
+        br >
 
-  
-      <input 
-      type="checkbox"
-      v-model="colors" 
-      value="Preto"  
-      >Preto
+        {
+            {
+                colors
+            }
+        } <
+        /div>
 
-      <br>
+        <
+        /div>
 
-      {{ colors }}
-    </div>
+        <
+        /template>
 
-  </div>
+    export default {
+        name: 'App',
+        components: {
 
-</template>
+        },
 
-<script>
+        data() {
 
-  export default {
-    name: 'App',
-    components: {
+            return {
+                name: 'Paulo',
+                esportes: 'futebol',
+                newslatter: '',
+                contrato: false,
+                colors: [],
+            }
 
-    },
-
-    data() {
-      
-      return {
-        name: 'Paulo',
-        esportes: 'futebol',
-        newslatter: '',
-        contrato: false,
-        colors: [],
+        }
     }
-
-  }
-}
 </script>
 
-<style>
+<script>
+< style >
 
-  
-
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -533,105 +563,101 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 8 | v-model -->
 
-
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
-
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 9 | events -->
-
 
 <!-- <template>
 
   <div>
 
-    <button @click="onClick">
-      Enviar
-    </button>
+    <button @click= "onClick" >
+            Enviar <
+            /button>
 
-    <br>
+            <
+            br >
 
-    <div
-      @mouseover="onMouseOver"
-      @mouseout="onMouseOut"
-    >
-    mouse over
+            <
+            div
+        @mouseover = "onMouseOver"
+        @mouseout = "onMouseOut" >
+            mouse over
 
-    </div>
+            <
+            /div>
 
+            <
+            br > < br >
 
-    <br><br>
+            <
+            div >
+            <
+            form action = "https://google.com"
+        @submit.prevent = "onSubmit" >
 
-    <div>
-      <form action="https://google.com"
-        @submit.prevent="onSubmit"
-        >
-   
-      <input 
-        type="text"
-        @keyup.enter="onKeyUp">
+            <
+            input
+        type = "text"
+        @keyup.enter = "onKeyUp" >
 
-      <button @click="submit">
-      Enviar
-    </button>
+            <
+            button @click = "submit" >
+            Enviar <
+            /button>
 
-  </form>
-    </div>
+            <
+            /form> <
+            /div>
 
-  </div>
+            <
+            /div>
 
-</template>
+            <
+            /template>
 
-<script>
+        export default {
+            name: 'App',
+            components: {
 
-  export default {
-    name: 'App',
-    components: {
+            },
 
-    },
+            data() {
 
-    data() {
-      
-      return {
-        
-    }
+                return {
 
-  },
+                }
 
-  methods: {
-    onClick($evt){
-      console.log('click', $evt)
-    },
-    onMouseOver($evt){
-      console.log('mouse over', $evt)
-    },
-    onMouseOut($evt){
-      console.log('mouse out', $evt)
-    },
-    onSubmit($evt){
-      console.log('submit', $evt)
-    },
-    onKeyUp($evt){
-      console.log('onKeyUp', $evt)
-    }
-  }
-}
+            },
+
+            methods: {
+                onClick($evt) {
+                    console.log('click', $evt)
+                },
+                onMouseOver($evt) {
+                    console.log('mouse over', $evt)
+                },
+                onMouseOut($evt) {
+                    console.log('mouse out', $evt)
+                },
+                onSubmit($evt) {
+                    console.log('submit', $evt)
+                },
+                onKeyUp($evt) {
+                    console.log('onKeyUp', $evt)
+                }
+            }
+        }
 </script>
 
-<style>
+<script>
+< style >
 
-  
-
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -639,23 +665,11 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 9 | events -->
 
-
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 10 | computed -->
-
 
 <!-- <template>
 
@@ -667,124 +681,143 @@ data() {
 
     <h2>TODOS ABERTAS</h2>
     <div 
-      v-for="todo in uncompletedTodos"
-      :key="todo.id">
-      <ul>
-        <li>{{ todo.title }} </li>
-      </ul>
-    </div>
-
-    <br><br>
-
-    <h2>TODOS COMPLETADAS</h2>
-    <div 
-      v-for="todo in completedTodos"
-      :key="todo.id">
-      <ul>
-        <li>{{ todo.title }} </li>
-      </ul>
-    </div>
-
-    <br><br><br>
-
-    <h2>TODOS</h2>
-    <div 
-      v-for="todo in todos"
-      :key="todo.id">
-
-      <input
-          v-model="todo.completed" 
-          type="checkbox">
-   
-      {{ todo.title }} 
-   
-    </div>
-
-  </div>
-
-</template>
-
-<script>
-
-  export default {
-    name: 'App',
-    components: {
-
-    },
-
-    data() {
-      
-      return {
-        user:{
-          nome: 'Paulo',
-          sobrenome: 'Pariz',
-        },
-        todos: [
+      v-for= "todo in uncompletedTodos": key = "todo.id" >
+            <
+            ul >
+            <
+            li > {
                 {
-                  "userId": 1,
-                  "id": 1,
-                  "title": "delectus aut autem",
-                  "completed": false
-                },
-                {
-                  "userId": 1,
-                  "id": 2,
-                  "title": "quis ut nam facilis et officia qui",
-                  "completed": false
-                },
-                {
-                  "userId": 1,
-                  "id": 3,
-                  "title": "fugiat veniam minus",
-                  "completed": false
-                },
-                {
-                  "userId": 1,
-                  "id": 4,
-                  "title": "et porro tempora",
-                  "completed": true
-                },
-                {
-                  "userId": 1,
-                  "id": 5,
-                  "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                  "completed": false
+                    todo.title
                 }
-              ]
-    }
+            } < /li> <
+            /ul> <
+            /div>
 
-  },
+            <
+            br > < br >
 
-  methods: {
-  
-  },
+            <
+            h2 > TODOS COMPLETADAS < /h2> <
+            div
+        v -
+            for = "todo in completedTodos": key = "todo.id" >
+            <
+            ul >
+            <
+            li > {
+                {
+                    todo.title
+                }
+            } < /li> <
+            /ul> <
+            /div>
 
-  computed: {
-        fullName() {
-          return `${this.user.nome} ${this.user.sobrenome}`
-        },
+            <
+            br > < br > < br >
 
-        uncompletedTodos() {
-          return this.todos.filter(todo => todo.completed);
-        },
+            <
+            h2 > TODOS < /h2> <
+            div
+        v -
+            for = "todo in todos": key = "todo.id" >
 
-        completedTodos() {
-          return this.todos.filter(todo => !todo.completed);
-      }
+            <
+            input
+        v - model = "todo.completed"
+        type = "checkbox" >
 
-  }
-}
+            {
+                {
+                    todo.title
+                }
+            }
+
+            <
+            /div>
+
+            <
+            /div>
+
+            <
+            /template>
+
+        export default {
+            name: 'App',
+            components: {
+
+            },
+
+            data() {
+
+                return {
+                    user: {
+                        nome: 'Paulo',
+                        sobrenome: 'Pariz',
+                    },
+                    todos: [{
+                            "userId": 1,
+                            "id": 1,
+                            "title": "delectus aut autem",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 2,
+                            "title": "quis ut nam facilis et officia qui",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 3,
+                            "title": "fugiat veniam minus",
+                            "completed": false
+                        },
+                        {
+                            "userId": 1,
+                            "id": 4,
+                            "title": "et porro tempora",
+                            "completed": true
+                        },
+                        {
+                            "userId": 1,
+                            "id": 5,
+                            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                            "completed": false
+                        }
+                    ]
+                }
+
+            },
+
+            methods: {
+
+            },
+
+            computed: {
+                fullName() {
+                    return `${this.user.nome} ${this.user.sobrenome}`
+                },
+
+                uncompletedTodos() {
+                    return this.todos.filter(todo => todo.completed);
+                },
+
+                completedTodos() {
+                    return this.todos.filter(todo => !todo.completed);
+                }
+
+            }
+        }
 </script>
 
-<style>
+<script>
+< style >
 
-  
-
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
   li{
@@ -795,239 +828,240 @@ data() {
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 10 | computed -->
 
-
-
-
 <!--///////////////////////////////////////-->
 
-
-
-
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 11 | watch -->
-
 
 <!-- <template>
 
   <div>
     <input 
-      type="text"
-      v-model="name">
-      <br>
+      type= "text"
+        v - model = "name" >
+            <
+            br >
 
-      {{ name }}
+            {
+                {
+                    name
+                }
+            }
 
-      <br><br>
+            <
+            br > < br >
 
+            <
+            input
+        type = "text"
+        v - model = "user.first_name" >
 
-      <input 
-      type="text"
-      v-model="user.first_name">
-    
+            <
+            input
+        type = "text"
+        v - model = "userlast_name" >
+            <
+            br >
 
-      <input 
-      type="text"
-      v-model="userlast_name">
-      <br>
+            {
+                {
+                    user.first_name
+                }
+            } {
+                {
+                    user.last_name
+                }
+            }
 
-      {{ user.first_name }} {{ user.last_name }}
+            <
+            br > < br >
 
-      <br><br>
+            <
+            select v - model = "pageCount" >
+            <
+            option value = "5" > 5 < /option> <
+            option value = "10" > 10 < /option> <
+            option value = "20" > 20 < /option> <
+            /select> <
+            br > {
+                {
+                    pageCount
+                }
+            } <
+            /div>
 
-      <select v-model="pageCount">
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-      </select>
-      <br>
-      {{ pageCount }}
-    </div>
+            <
+            /template>
 
-</template>
+        export default {
+            name: 'App',
+            data() {
+                return {
+                    name: '',
+                    pageCount: 5,
+                    user: {
+                        first_name: '',
+                        last_name: '',
+                    },
+                }
 
-<script>
+            },
 
-export default {
-  name: 'App',
-  data() {
-    return {
-      name:'',
-      pageCount: 5,
-      user: {
-        first_name: '',
-        last_name: '',
-      },
-    }
-       
-  },
+            watch: {
+                name(vl) {
+                    if (vl.length >= 3) {
+                        this.saveUserName()
+                    }
+                },
+                pageCount() {
+                    this.changePage();
+                },
+                user: {
+                    handler() {
+                        console.log('User alterado');
+                    },
+                    deep: true
+                },
+            },
 
-  watch: {
-    name(vl) {
-      if (vl.length >= 3){
-        this.saveUserName()
-      }
-    },
-    pageCount(){
-      this.changePage();
-  },
-  user: {
-    handler(){
-      console.log('User alterado');
-    },
-    deep: true
-  },
-},
+            methods: {
+                saveUserName() {
+                    console.log('Ajax');
+                    console.log(this.name);
+                },
 
-  methods: {
-    saveUserName() {
-      console.log('Ajax');
-      console.log(this.name);
-    },
-   
-   
-  },
+            },
 
-  computed: {
+            computed: {
 
-  }
-}
+            }
+        }
 </script>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+<script>
+< style > #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
-  
 
 </style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 11 | watch -->
 
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
-
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 12 | ciclo -->
 
 <!-- <template>
 
   <div>
-    <TheHeader v-if="showHeader" />
-    <h1>HELLO</h1>
-    {{ name }}
+    <TheHeader v-if= "showHeader" / >
+            <
+            h1 > HELLO < /h1> {
+                {
+                    name
+                }
+            }
 
-    <br><br>
+            <
+            br > < br >
 
-    <input 
-      type="text"
-      v-model="name">
+            <
+            input
+        type = "text"
+        v - model = "name" >
 
-      {{ name }} 
-      <br>
-      
-    <button @click="showHeader = !showHeader"> 
-      Ativar e desativar
-    </button>
-  </div>
+            {
+                {
+                    name
+                }
+            } <
+            br >
 
-</template>
+            <
+            button @click = "showHeader = !showHeader" >
+            Ativar e desativar <
+            /button> <
+            /div>
 
-<script>
-import TheHeader from './components/aula4/TheHeader.vue';
+            <
+            /template>
 
+        import TheHeader from './components/aula4/TheHeader.vue';
 
-export default {
-  name: 'App',
-  components: {
-    TheHeader
-  },
-  data() {
-    return {
-      showHeader: true,
-      name: 'Paulo',
-    } 
-  },
+        export default {
+            name: 'App',
+            components: {
+                TheHeader
+            },
+            data() {
+                return {
+                    showHeader: true,
+                    name: 'Paulo',
+                }
+            },
 
+            // beforeUpdate() {
+            // },
+            // updated() {
+            //   console.log('beforeUpdate');
 
-  // beforeUpdate() {
-  // },
-  // updated() {
-  //   console.log('beforeUpdate');
-    
-  // },
-  // beforeCreate() {
-  //   console.log('beforeCreate');
-  //   console.log('Estado:',this.name);
-  //   console.log('DOM:', this.$el);
-  // },
-  // created() {
-  //   console.log('created');
-  //   console.log('Estado:',this.name);
-  //   console.log('DOM:', this.$el);
-  // },
-  // beforeMount() {
-  //   console.log('beforeMount');
-  //   console.log('Estado:',this.name);
-  //   console.log('DOM:', this.$el);
-    
-  // },
-  // mounted() {
-  //   console.log('mounted');
-  //   console.log('Estado:',this.name);
-  //   console.log('DOM:', this.$el);
-    
-  // },
-  
+            // },
+            // beforeCreate() {
+            //   console.log('beforeCreate');
+            //   console.log('Estado:',this.name);
+            //   console.log('DOM:', this.$el);
+            // },
+            // created() {
+            //   console.log('created');
+            //   console.log('Estado:',this.name);
+            //   console.log('DOM:', this.$el);
+            // },
+            // beforeMount() {
+            //   console.log('beforeMount');
+            //   console.log('Estado:',this.name);
+            //   console.log('DOM:', this.$el);
 
-  watch: {
-},
+            // },
+            // mounted() {
+            //   console.log('mounted');
+            //   console.log('Estado:',this.name);
+            //   console.log('DOM:', this.$el);
 
-  methods: {
-   
-  },
+            // },
 
-  computed: {
+            watch: {},
 
-  }
-}
+            methods: {
+
+            },
+
+            computed: {
+
+            }
+        }
 </script>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+<script>
+< style > #app {
+        font - family: Avenir, Helvetica, Arial, sans - serif; -
+        webkit - font - smoothing: antialiased; -
+        moz - osx - font - smoothing: grayscale;
+        color: #2c3e50;
     margin-top: 60px;
   }
-  
 
 </style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 12 | ciclo -->
 
-
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
-
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 13 | slot -->
 
-
-<template>
+<!-- <template>
 
   <div>
     <TheHeader>
@@ -1047,9 +1081,7 @@ export default {
 
 </template>
 
-<script>
 import TheHeader from './components/aula4/TheHeader.vue';
-
 
 export default {
   name: 'App',
@@ -1062,14 +1094,12 @@ export default {
     } 
   },
 
-
    beforeUpdate() {},
    updated() {},
    beforeCreate() {},
    created() {},
    beforeMount() {},
    mounted() {},
-  
 
   watch: {
 },
@@ -1092,8 +1122,86 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
   }
-  
+
+</style> -->
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 13 | slot -->
+
+<!--///////////////////////////////////////-->
+
+<!-- ////////////////////////////////
+  ////////AULA 14 | SCOPED E GLOBAL CSS //////////////
+//////////////////////////////////// -->
+
+
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 15 | props -->
+
+<template>
+
+    <div>
+      <BaseAlert 
+        :variant="variant"
+        :text="text"
+        />
+        
+    </div>
+</template>
+
+<script>
+import BaseAlert from './components/aula15/BaseAlert.vue';
+
+export default {
+  name: 'App',
+  components: {
+    BaseAlert
+  },
+  data() {
+    return {
+      variant: 'success',
+      text: 'Seu formulario foi enviado'
+    } 
+  },
+
+   beforeUpdate() {},
+   updated() {},
+   beforeCreate() {},
+   created() {},
+   beforeMount() {},
+   mounted() {},
+
+  watch: {
+},
+
+  methods: {
+   
+  },
+
+  computed: {
+
+  }
+}
+</script>
+
+<style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 
 </style>
 
-<!-- FIM TEMPLETE REFERENTE Á AULA 13 | slot -->
+<!-- FIM TEMPLETE REFERENTE Á AULA 15 | props -->
