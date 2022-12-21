@@ -649,6 +649,11 @@ data() {
 
 
 
+<!--///////////////////////////////////////-->
+
+
+
+
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 10 | computed -->
 
 
@@ -793,10 +798,15 @@ data() {
 
 
 
+<!--///////////////////////////////////////-->
 
 
 
-<template>
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 11 | watch -->
+
+
+<!-- <template>
 
   <div>
     <input 
@@ -872,9 +882,115 @@ export default {
       console.log('Ajax');
       console.log(this.name);
     },
-    changePage(){
-      console.log('Ajax changepage')
-    }
+   
+   
+  },
+
+  computed: {
+
+  }
+}
+</script>
+
+<style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  
+
+</style> -->
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 11 | watch -->
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 12 | ciclo -->
+
+<template>
+
+  <div>
+    <TheHeader v-if="showHeader" />
+    <h1>HELLO</h1>
+    {{ name }}
+
+    <br><br>
+
+    <input 
+      type="text"
+      v-model="name">
+
+      {{ name }} 
+      <br>
+      
+    <button @click="showHeader = !showHeader"> 
+      Ativar e desativar
+    </button>
+  </div>
+
+</template>
+
+<script>
+import TheHeader from './components/aula4/TheHeader.vue';
+
+
+export default {
+  name: 'App',
+  components: {
+    TheHeader
+  },
+  data() {
+    return {
+      showHeader: true,
+      name: 'Paulo',
+    } 
+  },
+
+
+  // beforeUpdate() {
+  // },
+  // updated() {
+  //   console.log('beforeUpdate');
+    
+  // },
+  // beforeCreate() {
+  //   console.log('beforeCreate');
+  //   console.log('Estado:',this.name);
+  //   console.log('DOM:', this.$el);
+  // },
+  // created() {
+  //   console.log('created');
+  //   console.log('Estado:',this.name);
+  //   console.log('DOM:', this.$el);
+  // },
+  // beforeMount() {
+  //   console.log('beforeMount');
+  //   console.log('Estado:',this.name);
+  //   console.log('DOM:', this.$el);
+    
+  // },
+  // mounted() {
+  //   console.log('mounted');
+  //   console.log('Estado:',this.name);
+  //   console.log('DOM:', this.$el);
+    
+  // },
+  
+
+  watch: {
+},
+
+  methods: {
    
   },
 
@@ -895,3 +1011,5 @@ export default {
   
 
 </style>
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 12 | ciclo -->
