@@ -5,6 +5,11 @@
     {{ $store.state.user.first_name }} {{ $store.state.user.last_name }}
     <br>
     {{ $store.state.user.email }}
+
+    <br>
+    <button @click="updateUser()">Atualizar perfil</button>
+
+
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -39,7 +44,19 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+
+  methods: {
+            updateUser() {
+                const newUser = {
+                    first_name: 'Pariz',
+                    last_name: 'Paulo',
+                    email: 'pariz12121@.com'
+                }
+                this.$store.commit('storeUser', newUser)
+                
+            }
+        },
 }
 </script>
 
