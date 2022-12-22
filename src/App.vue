@@ -17,36 +17,36 @@
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
-    import TheHeader from './components/aula4/TheHeader.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/aula4/TheHeader.vue'
 
-    export default {
-        name: 'App',
-        components: {
-            HelloWorld,
-            TheHeader
-        },
+export default {
+    name: 'App',
+    components: {
+        HelloWorld,
+        TheHeader
+    },
 
-        data() {
-            return {
-                showHeader: true,
-                name: 'PAULO',
-                sobreNome: 'PARIZ',
-                showNme: false,
-                accessLevel: 'marketing'
-            }
+    data() {
+        return {
+            showHeader: true,
+            name: 'PAULO',
+            sobreNome: 'PARIZ',
+            showNme: false,
+            accessLevel: 'marketing'
         }
-
     }
+
+}
 </script>
 
-<style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
+<script>
+    < style > #app {
+            font - family: Avenir, Helvetica, Arial, sans - serif; -
+            webkit - font - smoothing: antialiased; -
+            moz - osx - font - smoothing: grayscale;
+            text - align: center;
+            color: #2c3e50;
         margin-top: 60px;
     }
 </style> -->
@@ -61,64 +61,77 @@
 
   <div>
 
-    <div v-for="(obj, index) in todos" v-bind:key="obj.id">
-      <ul>
-        <li>{{ index }} - {{ obj.title }}</li>
-      </ul>
-    </div>
+    <div v-for= "(obj, index) in todos"
+            v - bind: key = "obj.id" >
+                <
+                ul >
+                <
+                li > {
+                    {
+                        index
+                    }
+                } - {
+                    {
+                        obj.title
+                    }
+                } < /li> < /
+            ul > <
+                /div>
 
-  </div>
+                <
+                /div>
 
-</template>
+                <
+                /template>
 
-<script>
-  export default {
-    name: 'App',
-    components: {
+            export default {
+                name: 'App',
+                components: {
 
-    },
+                },
 
-    data() {
-      return {
-        todos: [{
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": false
-          },
-          {
-            "userId": 1,
-            "id": 4,
-            "title": "et porro tempora",
-            "completed": true
-          },
-          {
-            "userId": 1,
-            "id": 5,
-            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-            "completed": false
-          }
-        ]
-      }
-    }
+                data() {
+                    return {
+                        todos: [{
+                                "userId": 1,
+                                "id": 1,
+                                "title": "delectus aut autem",
+                                "completed": false
+                            },
+                            {
+                                "userId": 1,
+                                "id": 2,
+                                "title": "quis ut nam facilis et officia qui",
+                                "completed": false
+                            },
+                            {
+                                "userId": 1,
+                                "id": 3,
+                                "title": "fugiat veniam minus",
+                                "completed": false
+                            },
+                            {
+                                "userId": 1,
+                                "id": 4,
+                                "title": "et porro tempora",
+                                "completed": true
+                            },
+                            {
+                                "userId": 1,
+                                "id": 5,
+                                "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                                "completed": false
+                            }
+                        ]
+                    }
+                }
 
-  }
+            }
 </script>
 
 <script>
-< style > #app {
+<
+style > #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
         webkit - font - smoothing: antialiased; -
         moz - osx - font - smoothing: grayscale;
@@ -163,8 +176,8 @@
                     obj.title
                 }
             } <
-            /li> <
-            /ul> <
+            /li> < /
+        ul > <
             /div>
 
             <
@@ -221,7 +234,8 @@
 </script>
 
 <script>
-< s > #app {
+<
+s > #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
         webkit - font - smoothing: antialiased; -
         moz - osx - font - smoothing: grayscale;
@@ -283,8 +297,8 @@
                     obj.title
                 }
             } <
-            /li> <
-            /ul> <
+            /li> < /
+        ul > <
             /div>
 
             <
@@ -351,7 +365,8 @@
 </script>
 
 <script>
-< style >
+<
+style >
 
     .text - home {
         color: yellow;
@@ -419,16 +434,16 @@
         div >
         <
         label > ESPORTES < /label> <
-        br >
+    br >
 
         <
         select v - model = "esportes" >
         <
         option value = "" > Escolha < /option> <
-        option value = "futebol" > Futebol < /option> <
-        option value = "basquete" > Basquete < /option> <
-        option value = "volei" > Volei < /option> <
-        /select> <
+    option value = "futebol" > Futebol < /option> <
+    option value = "basquete" > Basquete < /option> <
+    option value = "volei" > Volei < /option> < /
+    select > <
         br >
 
         {
@@ -445,7 +460,7 @@
         div >
         <
         label > NewsLatter < /label> <
-        br >
+    br >
         <
         input
     type = "radio"
@@ -477,7 +492,7 @@
         div >
         <
         label > Contrato < /label> <
-        br >
+    br >
         <
         input
     type = "checkbox"
@@ -497,7 +512,7 @@
         div >
         <
         label > Cores < /label> <
-        br >
+    br >
         <
         input
     type = "checkbox"
@@ -549,7 +564,8 @@
 </script>
 
 <script>
-< style >
+<
+style >
 
     #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
@@ -607,8 +623,8 @@
             /button>
 
             <
-            /form> <
-            /div>
+            /form> < /
+        div >
 
             <
             /div>
@@ -651,7 +667,8 @@
 </script>
 
 <script>
-< style >
+<
+style >
 
     #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
@@ -689,8 +706,8 @@
                 {
                     todo.title
                 }
-            } < /li> <
-            /ul> <
+            } < /li> < /
+        ul > <
             /div>
 
             <
@@ -698,7 +715,7 @@
 
             <
             h2 > TODOS COMPLETADAS < /h2> <
-            div
+        div
         v -
             for = "todo in completedTodos": key = "todo.id" >
             <
@@ -708,8 +725,8 @@
                 {
                     todo.title
                 }
-            } < /li> <
-            /ul> <
+            } < /li> < /
+        ul > <
             /div>
 
             <
@@ -717,7 +734,7 @@
 
             <
             h2 > TODOS < /h2> <
-            div
+        div
         v -
             for = "todo in todos": key = "todo.id" >
 
@@ -811,7 +828,8 @@
 </script>
 
 <script>
-< style >
+<
+style >
 
     #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
@@ -879,9 +897,9 @@
             select v - model = "pageCount" >
             <
             option value = "5" > 5 < /option> <
-            option value = "10" > 10 < /option> <
-            option value = "20" > 20 < /option> <
-            /select> <
+        option value = "10" > 10 < /option> <
+        option value = "20" > 20 < /option> < /
+        select > <
             br > {
                 {
                     pageCount
@@ -938,11 +956,12 @@
 </script>
 
 <script>
-< style > #app {
-        font - family: Avenir, Helvetica, Arial, sans - serif; -
-        webkit - font - smoothing: antialiased; -
-        moz - osx - font - smoothing: grayscale;
-        color: #2c3e50;
+<
+style > #app {
+    font - family: Avenir, Helvetica, Arial, sans - serif; -
+    webkit - font - smoothing: antialiased; -
+    moz - osx - font - smoothing: grayscale;
+    color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -958,94 +977,94 @@
 
   <div>
     <TheHeader v-if= "showHeader" / >
-            <
-            h1 > HELLO < /h1> {
-                {
-                    name
-                }
-            }
+        <
+        h1 > HELLO < /h1> { {
+    name
+}
+}
 
-            <
-            br > < br >
+<
+br > < br >
 
-            <
-            input
-        type = "text"
-        v - model = "name" >
+    <
+    input
+type = "text"
+v - model = "name" >
 
-            {
-                {
-                    name
-                }
-            } <
-            br >
-
-            <
-            button @click = "showHeader = !showHeader" >
-            Ativar e desativar <
-            /button> <
-            /div>
-
-            <
-            /template>
-
-        import TheHeader from './components/aula4/TheHeader.vue';
-
-        export default {
-            name: 'App',
-            components: {
-                TheHeader
-            },
-            data() {
-                return {
-                    showHeader: true,
-                    name: 'Paulo',
-                }
-            },
-
-            // beforeUpdate() {
-            // },
-            // updated() {
-            //   console.log('beforeUpdate');
-
-            // },
-            // beforeCreate() {
-            //   console.log('beforeCreate');
-            //   console.log('Estado:',this.name);
-            //   console.log('DOM:', this.$el);
-            // },
-            // created() {
-            //   console.log('created');
-            //   console.log('Estado:',this.name);
-            //   console.log('DOM:', this.$el);
-            // },
-            // beforeMount() {
-            //   console.log('beforeMount');
-            //   console.log('Estado:',this.name);
-            //   console.log('DOM:', this.$el);
-
-            // },
-            // mounted() {
-            //   console.log('mounted');
-            //   console.log('Estado:',this.name);
-            //   console.log('DOM:', this.$el);
-
-            // },
-
-            watch: {},
-
-            methods: {
-
-            },
-
-            computed: {
-
-            }
+    {
+        {
+            name
         }
+    } <
+    br >
+
+    <
+    button @click = "showHeader = !showHeader" >
+    Ativar e desativar <
+    /button> < /
+div >
+
+    <
+    /template>
+
+import TheHeader from './components/aula4/TheHeader.vue';
+
+export default {
+    name: 'App',
+    components: {
+        TheHeader
+    },
+    data() {
+        return {
+            showHeader: true,
+            name: 'Paulo',
+        }
+    },
+
+    // beforeUpdate() {
+    // },
+    // updated() {
+    //   console.log('beforeUpdate');
+
+    // },
+    // beforeCreate() {
+    //   console.log('beforeCreate');
+    //   console.log('Estado:',this.name);
+    //   console.log('DOM:', this.$el);
+    // },
+    // created() {
+    //   console.log('created');
+    //   console.log('Estado:',this.name);
+    //   console.log('DOM:', this.$el);
+    // },
+    // beforeMount() {
+    //   console.log('beforeMount');
+    //   console.log('Estado:',this.name);
+    //   console.log('DOM:', this.$el);
+
+    // },
+    // mounted() {
+    //   console.log('mounted');
+    //   console.log('Estado:',this.name);
+    //   console.log('DOM:', this.$el);
+
+    // },
+
+    watch: {},
+
+    methods: {
+
+    },
+
+    computed: {
+
+    }
+}
 </script>
 
 <script>
-< style > #app {
+<
+style > #app {
         font - family: Avenir, Helvetica, Arial, sans - serif; -
         webkit - font - smoothing: antialiased; -
         moz - osx - font - smoothing: grayscale;
@@ -1114,12 +1133,12 @@ export default {
 }
 </script>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+<script>
+    < style > #app {
+            font - family: Avenir, Helvetica, Arial, sans - serif; -
+            webkit - font - smoothing: antialiased; -
+            moz - osx - font - smoothing: grayscale;
+            color: #2c3e50;
     margin-top: 60px;
   }
 
@@ -1133,17 +1152,7 @@ export default {
   ////////AULA 14 | SCOPED E GLOBAL CSS //////////////
 //////////////////////////////////// -->
 
-
-
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
-
-
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 15 | props -->
 
@@ -1151,137 +1160,113 @@ export default {
 
     <div>
       <BaseAlert 
-        :variant="variant"
-        :text="text"
-        ></BaseAlert>
+        :variant= "variant": text = "text" >
+                <
+                /BaseAlert>
 
-        
-        
-    </div>
-</template>
+                <
+                /div> < /
+            template >
 
-<script>
-import BaseAlert from './components/aula15/BaseAlert.vue';
+                import BaseAlert from './components/aula15/BaseAlert.vue';
 
-export default {
-  name: 'App',
-  components: {
-    BaseAlert
-  },
-  data() {
-    return {
-      variant: 'success',
-      text: 'Seu formulario foi enviado'
-    } 
-  },
+            export default {
+                name: 'App',
+                components: {
+                    BaseAlert
+                },
+                data() {
+                    return {
+                        variant: 'success',
+                        text: 'Seu formulario foi enviado'
+                    }
+                },
 
-   beforeUpdate() {},
-   updated() {},
-   beforeCreate() {},
-   created() {},
-   beforeMount() {},
-   mounted() {},
+                beforeUpdate() {},
+                updated() {},
+                beforeCreate() {},
+                created() {},
+                beforeMount() {},
+                mounted() {},
 
-  watch: {
-},
+                watch: {},
 
-  methods: {
-    
-   
-  },
+                methods: {
 
-  computed: {
+                },
 
-  }
-}
+                computed: {
+
+                }
+            }
 </script>
 
 <style>
-  #app {
+#app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     margin-top: 60px;
-  }
-
+}
 </style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 15 | props -->
 
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
-
 
 <!-- ////////////////////////////////
   ////////AULA 16 | ENVIANDO DADOS //////////////
 //////////////////////////////////// -->
 
-
-
-
-
-
 <!--///////////////////////////////////////-->
-
-
-
-
-
-
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 17 | router -->
 
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link :to="rotaDinamica">Servicos</router-link> |
-    <router-link to="/usuarios/10">Usuario</router-link>
-    
-  </nav>
-  <router-view/>
+    <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link :to="rotaDinamica">Servicos</router-link> |
+        <router-link to="/usuarios/10">Usuario</router-link>
+
+    </nav>
+    <router-view />
 </template>
 
-
 <script>
-export default {
-  data() {
-    return{
-      rotaDinamica: { name: 'servicos'}
+    export default {
+        data() {
+            return {
+                rotaDinamica: {
+                    name: 'servicos'
+                }
+            }
+        }
     }
-  }
-}
-
 </script>
 
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+    }
 
-nav {
-  padding: 30px;
-}
+    nav {
+        padding: 30px;
+    }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    nav a {
+        font-weight: bold;
+        color: #2c3e50;
+    }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+    nav a.router-link-exact-active {
+        color: #42b983;
+    }
 </style>
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 17 | router -->
