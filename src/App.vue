@@ -1293,7 +1293,7 @@ export default {
 
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 20/22| mutations -->
 
-<template>
+<!-- <template>
     {{ $store.getters.total }}
     <AppProducts />
 
@@ -1347,6 +1347,79 @@ import AppProducts from './components/Products/AppProducts.vue';
 
 <style>
     
-</style>
+</style> -->
 
 <!-- FIM TEMPLETE REFERENTE Á AULA 20/22 | mutations -->
+
+
+
+
+
+<!--///////////////////////////////////////-->
+
+
+
+
+
+
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 25| composition API -->
+
+<template>
+    {{ name }} <br>
+    
+    <h5>USER</h5>
+    {{  user.first_name }} {{  user.last_name }}
+    
+    <br><br>
+    
+    <h5>Admin</h5>
+    {{  admin.first_name }} {{  admin.last_name }}
+
+
+    <img @click="changeName()" src="./assets/logo.png" alt="">
+
+</template>
+
+
+
+<script>
+import { ref, reactive } from 'vue';
+
+export default {
+    name: 'App',
+    components: {
+        
+    },
+    setup(){
+        const user = reactive( {
+            first_name: 'Paulo',
+            last_name: 'Pariz'
+        })
+
+        const admin = ref( {
+            first_name: 'Admin',
+            last_name: 'master'
+        })
+
+        let name = 'Tiago'
+
+        const changeName = () => {
+            alert('chegou')
+            name = 'Paulo Pariz'
+            user.first_name = 'sansa'
+            admin.value.first_name = 'xxxxxx'
+        }
+
+        return{
+            user,
+            name,
+            changeName,
+            admin
+        }
+    }
+}
+
+</script>
+
+
+<!-- FIM TEMPLETE REFERENTE Á AULA 25 | composition API  -->
