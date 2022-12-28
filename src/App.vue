@@ -1291,7 +1291,7 @@ export default {
 
 
 
-<!-- ESTE É O TEMPLETE REFERENTE Á AULA 20| mutations -->
+<!-- ESTE É O TEMPLETE REFERENTE Á AULA 20/22| mutations -->
 
 <template>
     {{ $store.getters.total }}
@@ -1302,6 +1302,10 @@ export default {
     <pre>
         {{ $store.state.cart }}
     </pre>
+
+    <br>
+
+    {{ $store.state.user.first_name }} {{ $store.state.user.last_name }} <br>
 
     <button @click="updateUser()">Atualizar perfil</button>
 
@@ -1318,6 +1322,20 @@ import AppProducts from './components/Products/AppProducts.vue';
         };
     },
 
+    methods: {
+            updateUser() {
+                const newUser = {
+                    first_name: 'Pariz',
+                    last_name: 'Paulo',
+                    email: 'pariz12121@.com'
+                }
+                // this.$store.commit('storeUser', newUser)
+                this.$store.dispatch('storeUser', newUser).then(() => {
+                    console.log('terminou')
+                })
+            }
+        },
+
     created() {
     },
 
@@ -1331,4 +1349,4 @@ import AppProducts from './components/Products/AppProducts.vue';
     
 </style>
 
-<!-- FIM TEMPLETE REFERENTE Á AULA 20 | mutations -->
+<!-- FIM TEMPLETE REFERENTE Á AULA 20/22 | mutations -->

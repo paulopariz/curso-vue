@@ -17,17 +17,7 @@ export default {
     msg: String
   },
 
-  methods: {
-            updateUser() {
-                const newUser = {
-                    first_name: 'Pariz',
-                    last_name: 'Paulo',
-                    email: 'pariz12121@.com'
-                }
-                this.$store.commit('storeUser', newUser)
-                
-            }
-        },
+  
 }
 </script>
 
