@@ -26,8 +26,7 @@ export default createStore({
     ],
     cart: []
   },
-  getters: {
-  },
+ 
   mutations: {
     storeUser(state, data){
       state.user = data
@@ -41,10 +40,16 @@ export default createStore({
     removeProduct(state, id){
       const idx = state.cart.findIndex(o => o.id === id)
       state.cart.splice(idx,  1);
-    }
+    },
   },
-  actions: {
-  },
-  modules: {
+
+  getters: {
+    total(state){
+      return state.cart.reduce((total, item) => total += item.price, 0)
+    },
   }
+
+
+
+
 })

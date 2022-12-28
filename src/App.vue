@@ -1294,12 +1294,13 @@ export default {
 <!-- ESTE É O TEMPLETE REFERENTE Á AULA 20| mutations -->
 
 <template>
+    {{ $store.getters.total }}
     <AppProducts />
 
     <br>
     <br>
     <pre>
-        {{ $store.state.cart.length }}
+        {{ $store.state.cart }}
     </pre>
 
     <button @click="updateUser()">Atualizar perfil</button>
